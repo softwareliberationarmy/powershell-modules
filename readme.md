@@ -13,3 +13,7 @@ Runs several node commands to spin up a new jest-based testing environment in th
 - npm is installed
 - VS code is installed
 - internet access
+
+## TODO
+
+- create Powershell install script for loading these modules locally

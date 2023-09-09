@@ -21,10 +21,10 @@ if (!(Test-Path $modulePath)) {
 }
 
 # copy the modules from the .\modules folder to the $modulePath
-Copy-Item -Path .\modules\* -Destination $modulePath -Recurse -Force
+Copy-Item -Path ..\modules\* -Destination $modulePath -Recurse -Force
 
 # get the names of the folders in the module folder into an array
-$moduleFolders = Get-ChildItem -Path .\modules -Directory | Select-Object -ExpandProperty Name
+$moduleFolders = Get-ChildItem -Path ..\modules -Directory | Select-Object -ExpandProperty Name
 
 # for each module folder, create a 'Install-Module string'
 $moduleFolders | ForEach-Object {

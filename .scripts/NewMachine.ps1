@@ -2,5 +2,5 @@
 Set-Location -Path $PSScriptRoot
 
 .\AddZ.ps1
-.\CreateHanselmanPrettyPrompt.ps1
 .\ImportMyModules.ps1
+.\CreateHanselmanPrettyPrompt.ps1

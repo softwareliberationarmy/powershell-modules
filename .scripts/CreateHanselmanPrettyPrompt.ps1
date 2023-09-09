@@ -2,7 +2,6 @@
 # Pre-requisites: Windows Terminal installed and cross-platform PowerShell installed
 # see https://www.hanselman.com/blog/how-to-make-a-pretty-prompt-in-windows-terminal-with-powerline-nerd-fonts-cascadia-code-wsl-and-ohmyposh
 
-# create a function that can be called multiple times in this script
 function Update-Profile (
     [Parameter(Mandatory = $true)]
     [string]$stmt

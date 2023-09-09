@@ -28,6 +28,6 @@ $moduleFolders = Get-ChildItem -Path ..\modules -Directory | Select-Object -Expa
 
 # for each module folder, create a 'Install-Module string'
 $moduleFolders | ForEach-Object {
-    $importModuleString = "Import-Module -Name $_ -Scope CurrentUser -Force"
+    $importModuleString = "Import-Module -Name $_"
     Update-Profile -stmt $importModuleString
 }

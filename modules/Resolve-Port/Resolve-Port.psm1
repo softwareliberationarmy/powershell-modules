@@ -1,4 +1,4 @@
-Function Check-Port {    
+Function Resolve-Port {    
     param(
         [Parameter(Mandatory = $true)]
         [int]$Port
@@ -25,4 +25,4 @@ Function Check-Port {
     
 }
 
-Export-ModuleMember -Function Check-Port
+Export-ModuleMember -Function Resolve-Port

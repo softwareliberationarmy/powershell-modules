@@ -20,7 +20,7 @@ Runs several node commands to spin up a new jest-based testing environment in th
 - VS code is installed
 - internet access
 
-### Check-Port
+### Resolve-Port
 
 Used for troubleshooting whether a port is in use or not. Also resets the WinNAT service in case it is locking up the port.
 

@@ -8,6 +8,16 @@ Per the instructions [here](https://learn.microsoft.com/en-us/powershell/scripti
 
 ## THE MODULES
 
+### Import-HuskyNet
+
+Uses the dotnet CLI to import the Husky tool into the root directory of a .NET solution and establish a pre-commit hook that restores, builds, and runs the tests for the solution before a git commit can be made.
+
+**Assumptions**
+
+- current directory contains a .sln file
+- current directory is the root of a git repository
+- dotnet CLI is installed
+
 ### New-Jest
 
 Runs several node commands to spin up a new jest-based testing environment in the current directory. Useful for doing TypeScript or JavaScript code kata. Also documents what I need to do to install Jest into an existing project.

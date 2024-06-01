@@ -19,3 +19,9 @@ Set-AliasWithCheck -aliasName gs -functionName Git-Status
 
 function global:Git-CheckoutMain { git checkout main }
 Set-AliasWithCheck -aliasName gm -functionName Git-CheckoutMain
+
+function global:Git-AddAll { git add . }
+Set-AliasWithCheck -aliasName ga -functionName Git-AddAll
+
+function global:Git-CleanupDeadBranches { git branch --merged | grep -v \* | xargs git branch -D }
+Set-AliasWithCheck -aliasName gc -functionName Git-CleanupDeadBranches

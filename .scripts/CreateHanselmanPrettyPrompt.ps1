@@ -19,10 +19,13 @@ $ErrorActionPreference = "Stop"
 # set the current working directory to where this script is located (important for relative file paths below)
 Set-Location -Path $PSScriptRoot
 
+Write-Output "Installing PowerShell modules..."
 Install-Module Terminal-Icons -Scope CurrentUser
 Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser
 Install-Module -Name PSReadLine -AllowPrerelease -Scope CurrentUser -Force -SkipPublisherCheck
+
+Write-Output "Installing oh-my-posh..."
+winget install JanDeDobbeleer.OhMyPosh -s winget
 
 $importStmts = @("Import-Module posh-git", "Import-Module Terminal-Icons")
 

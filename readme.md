@@ -30,6 +30,15 @@ Runs several node commands to spin up a new jest-based testing environment in th
 - VS code is installed
 - internet access
 
+## New-React
+
+Creates a new React application using the latest best practices and including setup for unit testing (jest) and integration testing (cypress)
+
+**Assumptions**
+
+- npm is installed (for accessing npx)
+- internet access
+
 ### Resolve-Port
 
 Used for troubleshooting whether a port is in use or not. Also resets the WinNAT service in case it is locking up the port.

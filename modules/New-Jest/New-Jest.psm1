@@ -13,7 +13,7 @@ Function New-Jest {
         ],
     };" | Out-File -FilePath ".\babel.config.js" # create the babel.config.js
 
-    Start-Process code . # open the current directory in VS Code
+    Open-VsCode # open the current directory in VS Code
     
 }
 

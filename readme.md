@@ -8,6 +8,10 @@ Per the instructions [here](https://learn.microsoft.com/en-us/powershell/scripti
 
 ## THE MODULES
 
+### Add-PackageJson 
+
+Calls `npm init --y` to create a new default package.json file
+
 ### Import-HuskyNet
 
 Uses the dotnet CLI to import the Husky tool into the root directory of a .NET solution and establish a pre-commit hook that restores, builds, and runs the tests for the solution before a git commit can be made.

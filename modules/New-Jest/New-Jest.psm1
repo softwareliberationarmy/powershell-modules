@@ -1,6 +1,7 @@
 Function New-Jest {    
     # Main Body
-    npm init -y # create the package.json
+    Add-PackageJson # call the Add-PackageJson function
+
     npm install --save-dev jest # install jest
     npx jest --init # create the jest.config.js
     npm install --save-dev @babel/core @babel/preset-env babel-jest # install babel

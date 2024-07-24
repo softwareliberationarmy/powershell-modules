@@ -1,4 +1,7 @@
 Function New-ReactTddKata {    
+    $ErrorActionPreference = "Stop"
+    $PSNativeCommandUseErrorActionPreference = $true
+    
     $projectname = "reactkata"
     # Main Body
     npm create vite@latest $projectname -- --template react-ts

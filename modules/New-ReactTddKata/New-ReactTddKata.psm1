@@ -1,11 +1,15 @@
 Function New-ReactTddKata {    
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$name
+    )
+    # halt on error
     $ErrorActionPreference = "Stop"
     $PSNativeCommandUseErrorActionPreference = $true
     
-    $projectname = "reactkata"
     # Main Body
-    npm create vite@latest $projectname -- --template react-ts
-    cd $projectname
+    New-ReactTsProject -name $name
+    cd $name
     npm install
     Install-Jest # npm install jest and setup the config
     Install-Cypress # npm install cypress and setup the config

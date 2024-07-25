@@ -8,6 +8,16 @@ Per the instructions [here](https://learn.microsoft.com/en-us/powershell/scripti
 
 ## THE MODULES
 
+### Add-PackageJson 
+
+Calls `npm init --y` to create a new default package.json file
+
+**Assumptions**
+
+- node and npm are installed
+- current directory has not already been 'npm init'ed
+- current directory is where you want your package.json and config files to live
+
 ### Import-HuskyNet
 
 Uses the dotnet CLI to import the Husky tool into the root directory of a .NET solution and establish a pre-commit hook that restores, builds, and runs the tests for the solution before a git commit can be made.
@@ -29,6 +39,15 @@ Runs several node commands to spin up a new jest-based testing environment in th
 - npm is installed
 - VS code is installed
 - internet access
+
+### Open-VsCode
+
+Opens Visual Studio Code at the current directory
+
+**Assumptions**
+
+- npm is installed
+- VS code is installed
 
 ### Resolve-Port
 

@@ -20,6 +20,9 @@ Set-AliasWithCheck -aliasName gs -functionName Git-Status
 function global:Git-CheckoutMain { git checkout main }
 Set-AliasWithCheck -aliasName gm -functionName Git-CheckoutMain
 
+function global:Git-MainPull { git checkout main; git pull; }
+Set-AliasWithCheck -aliasName gmp -functionName Git-MainPull
+
 function global:Git-AddAll { git add . }
 Set-AliasWithCheck -aliasName ga -functionName Git-AddAll
 

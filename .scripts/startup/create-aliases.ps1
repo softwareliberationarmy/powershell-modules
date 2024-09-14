@@ -29,7 +29,6 @@ Set-AliasWithCheck -aliasName ga -functionName Git-AddAll
 function global:Git-CleanupDeadBranches { git branch --merged | grep -v \* | xargs git branch -D }
 Set-AliasWithCheck -aliasName gc -functionName Git-CleanupDeadBranches
 
-# function to create a new branch given the branch name passed into the function 
 function global:Git-CreateBranch {
     param(
         [string]$branchName
@@ -38,3 +37,21 @@ function global:Git-CreateBranch {
     git checkout -b $branchName
 }
 Set-AliasWithCheck -aliasName gb -functionName Git-CreateBranch
+
+function global:Todoist-QuickCreate { 
+    param(
+        [string]$taskName
+    )
+
+    # read API key from file todoist-api in the user profile folder
+    $apiKey = Get-Content "$env:USERPROFILE\.todoist-api" -Raw
+
+    $url = "https://api.todoist.com/rest/v2/tasks"
+
+    $content = @{
+        content = $taskName
+    } | ConvertTo-Json
+
+    curl $url -X POST -H "Authorization: Bearer $apiKey" -H "Content-Type: application/json" --data $content -H "X-Request-Id: $(New-Guid)" 
+}
+Set-AliasWithCheck -aliasName todo -functionName Todoist-QuickCreate

@@ -26,6 +26,10 @@ Set-AliasWithCheck -aliasName gmp -functionName Git-MainPull
 function global:Git-AddAll { git add . }
 Set-AliasWithCheck -aliasName ga -functionName Git-AddAll
 
+# source: https://steven-giesel.com/blogPost/bbfb8333-e05a-4de7-88b9-17ac2248d77f 
+function global:Git-SwitchBack { git switch - }
+Set-AliasWithCheck -aliasName gg -functionName Git-SwitchBack
+
 function global:Git-CleanupDeadBranches { git branch --merged | grep -v \* | xargs git branch -D }
 Set-AliasWithCheck -aliasName gc -functionName Git-CleanupDeadBranches
 

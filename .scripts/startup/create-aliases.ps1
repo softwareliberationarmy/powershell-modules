@@ -41,6 +41,7 @@ function global:Git-CreateBranch {
     git checkout -b $branchName
 }
 Set-AliasWithCheck -aliasName gb -functionName Git-CreateBranch
+Set-AliasWithCheck -aliasName gnew -functionName Git-CreateBranch
 
 function global:Todoist-QuickCreate { 
     param(

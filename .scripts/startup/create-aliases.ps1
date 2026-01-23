@@ -31,7 +31,7 @@ function global:Git-SwitchBack { git switch - }
 Set-AliasWithCheck -aliasName gg -functionName Git-SwitchBack
 
 function global:Git-CleanupDeadBranches { git branch --merged | grep -v \* | xargs git branch -D }
-Set-AliasWithCheck -aliasName gc -functionName Git-CleanupDeadBranches
+Set-AliasWithCheck -aliasName gdead -functionName Git-CleanupDeadBranches
 
 function global:Git-CreateBranch {
     param(
@@ -40,8 +40,31 @@ function global:Git-CreateBranch {
 
     git checkout -b $branchName
 }
-Set-AliasWithCheck -aliasName gb -functionName Git-CreateBranch
 Set-AliasWithCheck -aliasName gnew -functionName Git-CreateBranch
+
+function global:Git-Checkout {
+    param(
+        [string]$branchName
+    )
+
+    git checkout $branchName
+}
+Set-AliasWithCheck -aliasName gc -functionName Git-Checkout
+
+function global:Git-Branch {
+    git branch
+}
+Set-AliasWithCheck -aliasName gb -functionName Git-Branch
+
+function global:Git-BranchRemote { 
+    git branch -r
+}
+Set-AliasWithCheck -aliasName gbr -functionName Git-BranchRemote
+
+function global:Git-LogLastTen { 
+    git log -n 10 --oneline
+}
+Set-AliasWithCheck -aliasName g10 -functionName Git-LogLastTen
 
 function global:Todoist-QuickCreate { 
     param(
